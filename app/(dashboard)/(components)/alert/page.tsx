@@ -273,7 +273,7 @@ const TypographyPage = () => {
                     <X className="w-5 h-5" />
                   </button>
                 </div>
-                <p className="font-medium text-primary text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                <p className="font-medium text-primary text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
               </div>
               <div className="alert alert-green bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400 border-green-100 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg" role="alert">
                 <div className="flex items-center justify-between text-lg">
@@ -282,7 +282,7 @@ const TypographyPage = () => {
                     <X className="w-5 h-5" />
                   </button>
                 </div>
-                <p className="font-medium text-green-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                <p className="font-medium text-green-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
               </div>
               <div className="alert alert-yellow bg-yellow-100 dark:bg-yellow-600/25 text-yellow-600 dark:text-yellow-400 border-yellow-100 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg" role="alert">
                 <div className="flex items-center justify-between text-lg">
@@ -291,7 +291,7 @@ const TypographyPage = () => {
                     <X className="w-5 h-5" />
                   </button>
                 </div>
-                <p className="font-medium text-yellow-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                <p className="font-medium text-yellow-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
               </div>
               <div className="alert alert-cyan bg-cyan-100 dark:bg-cyan-600/25 text-cyan-600 dark:text-cyan-400 border-cyan-100 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg" role="alert">
                 <div className="flex items-center justify-between text-lg">
@@ -300,7 +300,7 @@ const TypographyPage = () => {
                     <X className="w-5 h-5" />
                   </button>
                 </div>
-                <p className="font-medium text-cyan-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                <p className="font-medium text-cyan-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
               </div>
               <div className="alert alert-red bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400 border-red-100 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg" role="alert">
                 <div className="flex items-center justify-between text-lg">
@@ -309,7 +309,7 @@ const TypographyPage = () => {
                     <X className="w-5 h-5" />
                   </button>
                 </div>
-                <p className="font-medium text-red-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                <p className="font-medium text-red-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
               </div>
             </div>
           </DefaultCardComponent>
@@ -324,7 +324,7 @@ const TypographyPage = () => {
                     <Smile className="w-5 h-5 mt-1.5 shrink-0" />
                     <div>
                       This is a Primary alert
-                      <p className="font-medium text-primary text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                      <p className="font-medium text-primary text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
                     </div>
                   </div>
                   <button className="remove-button cursor-pointer text-primary text-2xl line-height-1">
@@ -338,7 +338,7 @@ const TypographyPage = () => {
                     <BadgeCheck className="w-5 h-5 mt-1.5 shrink-0" />
                     <div>
                       This is a Success alert
-                      <p className="font-medium text-green-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                      <p className="font-medium text-green-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
                     </div>
                   </div>
                   <button className="remove-button cursor-pointer text-green-600 text-2xl line-height-1">
@@ -352,7 +352,7 @@ const TypographyPage = () => {
                     <Clock className="w-5 h-5 mt-1.5 shrink-0" />
                     <div>
                       This is a Warning alert
-                      <p className="font-medium text-yellow-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                      <p className="font-medium text-yellow-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
                     </div>
                   </div>
                   <button className="remove-button cursor-pointer text-yellow-600 text-2xl line-height-1">
@@ -366,7 +366,7 @@ const TypographyPage = () => {
                     <ShieldCheck className="w-5 h-5 mt-1.5 shrink-0" />
                     <div>
                       This is a Info alert
-                      <p className="font-medium text-cyan-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                      <p className="font-medium text-cyan-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
                     </div>
                   </div>
                   <button className="remove-button cursor-pointer text-cyan-600 text-2xl line-height-1">
@@ -380,7 +380,7 @@ const TypographyPage = () => {
                     <Trash2 className="w-5 h-5 mt-1.5 shrink-0" />
                     <div>
                       This is a Danger alert
-                      <p className="font-medium text-red-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                      <p className="font-medium text-red-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
                     </div>
                   </div>
                   <button className="remove-button cursor-pointer text-red-600 text-2xl line-height-1">
