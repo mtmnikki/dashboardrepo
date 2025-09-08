@@ -13,22 +13,22 @@ import { Input } from '@/components/ui/input'
 import { useLoading } from '@/contexts/LoadingContext'
 import { loginSchema } from '@/lib/zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Eye, EyeOff, Loader2, Lock, Mail } from 'lucide-react'
-import { signIn } from 'next-auth/react'
+import { useSignIn } from '@clerk/nextjs'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useRef, useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { z } from 'zod'
-import { handleLoginAction } from './actions/login'
 import SocialLogin from './social-login'
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [isPending, startTransition] = useTransition()
   const { loading, setLoading } = useLoading()
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { signIn, isLoaded } = useSignIn()
+  const router = useRouter()
 
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
@@ -39,44 +39,41 @@ const LoginForm = () => {
   })
 
   const onSubmit = (values: z.infer<typeof loginSchema>) => {
+    if (!isLoaded) return
     setLoading(true)
     setIsSubmitting(true)
 
     startTransition(async () => {
       try {
-        if (!formRef.current) return
+        const result = await signIn.create({
+          identifier: values.email,
+          password: values.password,
+        })
 
-        const formData = new FormData(formRef.current)
-        const res = await handleLoginAction(formData)
-
-        if (res?.error) {
-          toast.error(res.error)
-        } else {
-          await signIn('credentials', {
-            redirect: true,
-            email: values.email,
-            password: values.password,
-            callbackUrl: '/dashboard',
-          })
+        if (result.status === 'complete') {
           toast.success('Login successful!')
+          await router.push('/dashboard')
+        } else {
+          // Handle errors, MFA, etc.
+          console.log(result)
+          toast.error('Something went wrong. Please try again.')
         }
-      } catch (error) {
-        toast.error('Something went wrong. Please try again.')
+      } catch (error: any) {
+        toast.error(
+          error.errors?.[0]?.longMessage ||
+            'Something went wrong. Please try again.'
+        )
       } finally {
         setLoading(false)
+        setIsSubmitting(false)
       }
-    });
-
-    setTimeout(() => {
-      setIsSubmitting(false)
-    }, 2000);
+    })
   }
 
   return (
     <>
       <Form {...form}>
         <form
-          ref={formRef}
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-5"
         >
