@@ -42,15 +42,13 @@ export const createPasswordSchema = z
   .object({
     password: passwordField,
     confirmPassword: z.string({
-      required_error: "Confirm Password is required",
+      required_error: 'Confirm Password is required',
     }),
-    acceptTerms: z.literal(true, {
-      errorMap: () => ({ message: "You must accept the terms and conditions" }),
-    }),
+    code: z.string().min(6, 'Verification code is required'),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Password does not match",
-    path: ["confirmPassword"],
+    message: 'Password does not match',
+    path: ['confirmPassword'],
   });
 
 export const formSchema = z.object({

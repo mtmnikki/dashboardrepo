@@ -15,17 +15,17 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, Mail } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useRef, useTransition } from 'react'
+import { useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { z } from 'zod'
-import { handleForgotPasswordAction } from './actions/forgot-password'
+import { useSignIn } from '@clerk/nextjs'
 
 const ForgotPasswordComponent = () => {
   const router = useRouter()
   const { loading, setLoading } = useLoading()
   const [isPending, startTransition] = useTransition()
-  const formRef = useRef<HTMLFormElement>(null)
+  const { isLoaded, signIn } = useSignIn()
 
   const form = useForm<z.infer<typeof forgotPasswordSchema>>({
     resolver: zodResolver(forgotPasswordSchema),
@@ -34,37 +34,33 @@ const ForgotPasswordComponent = () => {
     },
   })
 
-  const onSubmit = (values: z.infer<typeof forgotPasswordSchema>) => {
+  const onSubmit = async (values: z.infer<typeof forgotPasswordSchema>) => {
+    if (!isLoaded) {
+      return
+    }
     setLoading(true)
 
     startTransition(async () => {
       try {
-        if (!formRef.current) return
-
-        const formData = new FormData(formRef.current)
-        const result = await handleForgotPasswordAction(formData)
-
-        if (result?.success) {
-          toast.success('Password Reset code has been sent to your email')
-          router.push('/auth/create-password')
-        } else {
-          toast.error('Please enter a valid email')
-        }
-      } catch (error) {
+        await signIn.create({
+          strategy: 'reset_password_email_code',
+          identifier: values.email,
+        })
+        toast.success('Password Reset code has been sent to your email')
+        router.push('/auth/create-password')
+      } catch (error: any) {
         console.error('Forgot password error:', error)
-        toast.error('Something went wrong. Please try again.')
+        toast.error(error.errors[0].message)
       } finally {
         setTimeout(() => setLoading(false), 1000)
       }
     })
   }
 
-
   return (
     <>
       <Form {...form}>
         <form
-          ref={formRef}
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-5"
         >
