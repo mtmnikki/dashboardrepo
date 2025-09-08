@@ -1,12 +1,17 @@
-"use server"
+"use server";
 
-import { signIn, signOut } from "@clerk/nextjs/app-beta/actions";
+import { redirect } from "next/navigation";
 
 export async function doSocialLogin(formData: FormData) {
-    const action = formData.get('action');
-    await signIn(action as string, { redirectTo: '/dashboard' });
+  const action = formData.get("action");
+  const provider = action === "google" || action === "github" ? action : null;
+  if (provider) {
+    redirect(`/auth/login?provider=${provider}`);
+  }
+  redirect("/auth/login");
 }
 
+// Prefer using <SignOutButton /> from "@clerk/nextjs" on the client.
 export async function doLogout() {
-    await signOut();
+  redirect("/auth/login");
 }
