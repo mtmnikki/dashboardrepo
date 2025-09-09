@@ -22,11 +22,6 @@ export const data = {
       isActive: true,
       items: [
         {
-          title: "AI",
-          url: "/dashboard",
-          circleColor: "bg-primary",
-        },
-        {
           title: "CRM",
           url: "/crm",
           circleColor: "bg-yellow-500",
@@ -35,36 +30,6 @@ export const data = {
           title: "eCommerce",
           url: "/ecommerce",
           circleColor: "bg-cyan-500",
-        },
-        {
-          title: "Cryptocurrency",
-          url: "/cryptocurrency",
-          circleColor: "bg-red-500",
-        },
-        {
-          title: "Investment",
-          url: "/investment",
-          circleColor: "bg-green-600",
-        },
-        {
-          title: "LMS / Learning System",
-          url: "/lms",
-          circleColor: "bg-violet-600",
-        },
-        {
-          title: "NFT & Gaming",
-          url: "/nft",
-          circleColor: "bg-primary",
-        },
-        {
-          title: "Medical",
-          url: "/medical",
-          circleColor: "bg-red-600",
-        },
-        {
-          title: "Analytics",
-          url: "/analytics",
-          circleColor: "bg-violet-600",
         },
         {
           title: "POS & Inventory",
@@ -276,29 +241,6 @@ export const data = {
     },
     {
       label: "Pages",
-    },
-    {
-      title: "Authentication",
-      url: "#",
-      icon: ShieldCheck,
-      isActive: true,
-      items: [
-        {
-          title: "Sign In",
-          url: "/auth/login",
-          circleColor: "bg-primary",
-        },
-        {
-          title: "Sign Up",
-          url: "/auth/register",
-          circleColor: "bg-yellow-500",
-        },
-        {
-          title: "Forgot Password",
-          url: "/auth/forgot-password",
-          circleColor: "bg-cyan-500",
-        },
-      ],
     },
     {
       title: "Setting",
