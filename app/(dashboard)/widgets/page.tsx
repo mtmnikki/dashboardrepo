@@ -5,13 +5,11 @@ import DefaultCardComponent from "@/app/(dashboard)/components/default-card-comp
 import StatCard from "@/app/(dashboard)/(homes)/dashboard/components/stat-card";
 import StatsCard from "@/app/(dashboard)/(homes)/crm/components/stats-card";
 import StatsCardTwo from '@/app/(dashboard)/(homes)/ecommerce/component/stats-card';
-import StatsCardThree from '@/app/(dashboard)/(homes)/cryptocurrency/components/stats-card';
 import SalesStaticCard from "@/app/(dashboard)/(homes)/dashboard/components/sales-static-card";
 import TopCountriesCard from "@/app/(dashboard)/(homes)/dashboard/components/top-countries-card";
 import ClientPaymentStatusCard from "@/app/(dashboard)/(homes)/crm/components/client-payment-status-card";
 import EarningStatisticsCard from "@/app/(dashboard)/(homes)/crm/components/earning-statistics-card";
 import UserOverviewCard from "@/app/(dashboard)/(homes)/dashboard/components/user-overview-card";
-import StaticCard from "@/app/(dashboard)/(homes)/investment/components/static-card";
 import DailySalesCard from "@/app/(dashboard)/(homes)/ecommerce/component/daily-sales-card";
 
 const metadata: Metadata = {
@@ -37,9 +35,6 @@ const LineChartPage = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-neutral-200 dark:border-neutral-600">
                             <StatsCardTwo />
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 gap-6">
-                            <StatsCardThree />
-                        </div>
                     </div>
                 </DefaultCardComponent>
 
@@ -62,9 +57,6 @@ const LineChartPage = () => {
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
                         <DailySalesCard />
-                    </div>
-                    <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
-                        <StaticCard />
                     </div>
                 </div>
             </div>

@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 import { User, Mail, Settings } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Logout from "@/components/auth/logout";
 import userImg from "@/public/assets/images/user.png";
 import { useUser } from "@clerk/nextjs";
 
@@ -87,9 +86,6 @@ const ProfileDropdown = () => {
               >
                 <Settings className="w-5 h-5" /> Settings
               </Link>
-            </li>
-            <li>
-              <Logout />
             </li>
           </ul>
         </div>
