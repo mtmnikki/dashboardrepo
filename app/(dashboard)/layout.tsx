@@ -1,5 +1,6 @@
 import { AppSidebar } from '@/components/app-sidebar'
 import { NavMain } from '@/components/nav-main'
+import { SidebarProvider, Sidebar, SidebarContent } from "@/components/ui/sidebar"
 import { ThemeProvider } from '@/components/theme-provider'
 import { data } from '@/components/sidebar-data'
 import { Toaster } from 'react-hot-toast'
@@ -16,7 +17,7 @@ export default function DashboardLayout({
       disableTransitionOnChange
     >
       <div className="flex h-screen overflow-hidden">
-        <AppSidebar />
+        <AppSidebar >
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
           <NavMain items={data.navMain} />
           <main>
@@ -25,6 +26,7 @@ export default function DashboardLayout({
             </div>
           </main>
         </div>
+        </AppSidebar>
       </div>
       <Toaster />
     </ThemeProvider>
