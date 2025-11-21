@@ -1,3 +1,5 @@
+"use client";
+
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Button } from "@/components/ui/button";
@@ -8,13 +10,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { CircleHelp } from "lucide-react";
-import type { Metadata } from "next";
 
-const metadata: Metadata = {
-  title: "Tooltips & Hover Information | WowDash Admin Dashboard",
-  description:
-    "Enhance user experience with customizable tooltips and hover-based information displays in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const TypographyPage = () => {
   return (

@@ -1,15 +1,12 @@
+"use client";
+
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import FlagImage from "@/public/assets/images/flags/flag-tag.png";
 import { X } from "lucide-react";
-import type { Metadata } from "next";
 import Image from "next/image";
 
-const metadata: Metadata = {
-  title: "Tags & Label Elements | WowDash Admin Dashboard",
-  description:
-    "Manage and display tag components and label elements for categorization and UI organization in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const TypographyPage = () => {
   return (

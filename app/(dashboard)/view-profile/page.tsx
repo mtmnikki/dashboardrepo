@@ -5,13 +5,6 @@ import ViewProfileSidebar from "@/app/(dashboard)/view-profile/components/view-p
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import type { Metadata } from "next";
-
-const metadata: Metadata = {
-    title: "View Profile & User Details | WowDash Admin Dashboard",
-    description:
-        "Access detailed user profiles and personal information in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
 
 const ViewProfile = () => {
     return (

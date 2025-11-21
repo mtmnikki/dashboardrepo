@@ -1,18 +1,13 @@
+"use client";
+
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import BasicPieChart from "@/components/charts/basic-pie-chart";
 import DonutChart from "@/components/charts/donut-chart";
 import MultipleSeriesChart from "@/components/charts/multiple-series-chart";
 import RadarChart from "@/components/charts/radar-chart";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import LoadingSkeleton from "@/components/loading-skeleton";
-import type { Metadata } from "next";
-import { Suspense } from "react";
 
-const metadata: Metadata = {
-    title: "Pie Charts & Data Visualization | WowDash Admin Dashboard",
-    description:
-        "Explore various interactive chart components for analytics and data visualization in the WowDash Admin Dashboard template built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const PieChartPage = () => {
     return (
@@ -22,17 +17,13 @@ const PieChartPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <DefaultCardComponent title="Basic Pie Chart">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <BasicPieChart />
-                    </Suspense>
+                    <BasicPieChart />
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Donut Chart">
                     <div className="text-center flex flex-wrap items-start gap-5 justify-center">
                         <div className="relative">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                <DonutChart />
-                            </Suspense>
+                            <DonutChart />
                             <div className="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                                 <span className="text-lg text-secondary-light font-medium">Total Value</span>
                                 <h4 className="mb-0">72</h4>
@@ -92,15 +83,11 @@ const PieChartPage = () => {
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Radar Chart">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <RadarChart />
-                    </Suspense>
+                    <RadarChart />
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Multiple series">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <MultipleSeriesChart />
-                    </Suspense>
+                    <MultipleSeriesChart />
                 </DefaultCardComponent>
 
             </div>

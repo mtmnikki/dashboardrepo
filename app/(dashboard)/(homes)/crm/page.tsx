@@ -9,13 +9,6 @@ import StatsCard from '@/app/(dashboard)/(homes)/crm/components/stats-card';
 import TodoListRecentCard from '@/app/(dashboard)/(homes)/crm/components/todo-list-recent-card';
 import TopPerformerCard from '@/app/(dashboard)/(homes)/crm/components/top-performer-card';
 import DashboardBreadcrumb from '@/components/layout/dashboard-breadcrumb';
-import type { Metadata } from "next";
-
-const metadata: Metadata = {
-  title: "CRM Dashboard | WowDash Admin Panel",
-  description:
-    "Manage customer interactions, view campaign performance, track revenue, and analyze customer behavior with the CRM Dashboard in WowDash.",
-};
 
 
 const crmPage = () => {

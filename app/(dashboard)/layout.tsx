@@ -5,6 +5,8 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { data } from '@/components/sidebar-data'
 import { Toaster } from 'react-hot-toast'
 
+export const dynamic = 'force-dynamic';
+
 export default function DashboardLayout({
   children,
 }: {

@@ -1,5 +1,6 @@
+"use client";
+
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import type { Metadata } from "next";
 import Image from "next/image";
 
 import AvatarShape1 from "@/public/assets/images/avatar/avatar-shape1.png";
@@ -18,11 +19,7 @@ import AvatarGroup6 from "@/public/assets/images/avatar/avatar-group6.png";
 import StatusAvatar from "@/public/assets/images/avatar/status-avatar.png";
 import { Plus } from "lucide-react";
 
-const metadata: Metadata = {
-  title: "User Avatars & Profile Images | WowDash Admin Dashboard",
-  description:
-    "Manage and display user avatars, profile images, and avatar customization options in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const TypographyPage = () => {
   return (

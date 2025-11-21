@@ -1,12 +1,9 @@
+"use client";
+
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import type { Metadata } from "next";
 
-const metadata: Metadata = {
-  title: "Pagination Controls & Navigation | WowDash Admin Dashboard",
-  description:
-    "Implement and customize pagination controls for seamless data navigation in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const TypographyPage = () => {
   return (

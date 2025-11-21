@@ -1,3 +1,5 @@
+"use client";
+
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,14 +11,9 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import type { Metadata } from "next";
 import { saveProfileAction } from "./actions";
 
-const metadata: Metadata = {
-    title: "Company Profile & Details | WowDash Admin Dashboard",
-    description:
-        "View and manage company profiles, business details, and related information in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const ViewProfile = () => {
     return (

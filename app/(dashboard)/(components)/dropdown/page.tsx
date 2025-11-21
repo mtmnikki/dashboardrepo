@@ -1,3 +1,5 @@
+"use client";
+
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import {
@@ -9,13 +11,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Ellipsis, EllipsisVertical } from 'lucide-react';
-import type { Metadata } from "next";
 
-const metadata: Metadata = {
-  title: "Dropdowns & Menu Navigation | WowDash Admin Dashboard",
-  description:
-    "Manage and customize dropdown menus and navigation components in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const DropdownPage = () => {
   return (

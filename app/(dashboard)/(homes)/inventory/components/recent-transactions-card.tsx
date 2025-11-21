@@ -1,3 +1,5 @@
+"use client";
+
 import CommonLink from "@/components/shared/common-link";
 import InventoryRecentTransactionsTable from "@/components/table/inventory-recent-transactions-table";
 import { Card, CardContent } from "@/components/ui/card";

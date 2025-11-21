@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import EmailSidebar from "@/app/(dashboard)/components/email-sidebar";
@@ -11,11 +10,7 @@ import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-over
 import { Suspense } from "react";
 import LoadingSkeleton from "@/components/loading-skeleton";
 
-const metadata: Metadata = {
-    title: "Email Management & Communication | WowDash Admin Dashboard",
-    description:
-        "Access and manage email communications, inbox features, and message organization in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const EmailPage = () => {
     return (

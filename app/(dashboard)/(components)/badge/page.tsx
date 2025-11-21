@@ -1,16 +1,13 @@
+"use client";
+
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import FlagImage from "@/public/assets/images/lang-flag.png";
-import type { Metadata } from "next";
 import Image from "next/image";
 
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { BellRing, Mail } from "lucide-react";
 
-const metadata: Metadata = {
-  title: "Badges & Status Indicators | WowDash Admin Dashboard",
-  description:
-    "Explore customizable badges, status indicators, and notification labels in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const TypographyPage = () => {
   return (

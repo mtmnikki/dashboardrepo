@@ -1,16 +1,9 @@
-import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Suspense } from "react";
 import LoadingSkeleton from "@/components/loading-skeleton";
 import BasicFullCalendar from "./components/basic-full-calendar";
 import CalendarSidebar from "./components/calendar-sidebar";
-
-const metadata: Metadata = {
-    title: "Calendar & Event Scheduling | WowDash Admin Dashboard",
-    description:
-        "Plan, organize, and track events effortlessly with the interactive calendar in the WowDash Admin Dashboard, built using Next.js, Tailwind CSS, and shadcn UI.",
-};
 
 
 const CalendarPage = () => {
