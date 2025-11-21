@@ -1,4 +1,3 @@
-import { LoadingProvider } from "@/contexts/LoadingContext";
 // Clerk imports temporarily commented out for build
 // TODO: Configure Clerk keys or migrate to Supabase
 /*
@@ -15,7 +14,7 @@ import {
 import "./globals.css"
 
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
