@@ -32,7 +32,7 @@ const ProfileDropdown = () => {
       setUser(user);
     };
     getUser();
-  }, [supabase.auth]);
+  }, []);
 
   return (
     <DropdownMenu>

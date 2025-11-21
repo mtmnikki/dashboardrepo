@@ -52,11 +52,19 @@ Visit http://localhost:3000 - you'll be redirected to the login page.
 
 ### 4. Create Your First User
 
-1. Click "create a new account" link on the login page
-2. Fill in email and password
-3. Check your email for verification link
-4. Click the verification link
-5. Return to the app and log in
+To create users, you can either:
+
+**Option A: Using Supabase Dashboard**
+1. Go to your [Supabase Dashboard](https://supabase.com/dashboard)
+2. Navigate to **Authentication → Users**
+3. Click "Add user" and create with email/password
+4. Return to the app and log in with those credentials
+
+**Option B: Enable Public Sign-ups**
+1. Go to your [Supabase Dashboard](https://supabase.com/dashboard)
+2. Navigate to **Authentication → Providers → Email**
+3. Enable "Confirm email" if you want email verification
+4. Users can then use Google OAuth to sign in via the login page
 
 ## 📁 File Structure
 
@@ -64,7 +72,6 @@ Visit http://localhost:3000 - you'll be redirected to the login page.
 app/
 ├── (auth)/
 │   ├── login/page.tsx          # Login page
-│   ├── signup/page.tsx         # Signup page
 │   └── layout.tsx              # Auth layout
 ├── auth/
 │   └── callback/route.ts       # OAuth callback handler
@@ -80,7 +87,7 @@ middleware.ts                    # Route protection
 
 ## 🔐 Protected Routes
 
-All routes except `/login` and `/signup` are protected by default. Unauthenticated users will be redirected to the login page.
+All routes except `/login` are protected by default. Unauthenticated users will be redirected to the login page.
 
 To make a route public, modify `lib/supabase/middleware.ts`:
 
@@ -94,8 +101,8 @@ if (!user && !isAuthPage && !isPublicRoute) {
 
 ## 🎨 Customization
 
-### Login/Signup Pages
-- Located in `app/(auth)/login/page.tsx` and `app/(auth)/signup/page.tsx`
+### Login Page
+- Located in `app/(auth)/login/page.tsx`
 - Styled with Tailwind CSS and shadcn/ui components
 - Includes email/password and Google OAuth buttons
 

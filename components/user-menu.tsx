@@ -35,7 +35,7 @@ export function UserMenu() {
       setUser(user)
     }
     getUser()
-  }, [supabase.auth])
+  }, [])
 
   const handleLogout = async () => {
     const { error } = await supabase.auth.signOut()

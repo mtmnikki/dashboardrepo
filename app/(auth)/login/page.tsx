@@ -6,8 +6,9 @@ import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import Link from 'next/link'
 import toast from 'react-hot-toast'
+
+export const dynamic = 'force-dynamic'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
@@ -64,12 +65,6 @@ export default function LoginPage() {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
             Sign in to your account
           </h2>
-          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            Or{' '}
-            <Link href="/signup" className="font-medium text-primary hover:text-primary/80">
-              create a new account
-            </Link>
-          </p>
         </div>
 
         <form onSubmit={handleLogin} className="mt-8 space-y-6 bg-white dark:bg-gray-800 p-8 rounded-lg shadow">
