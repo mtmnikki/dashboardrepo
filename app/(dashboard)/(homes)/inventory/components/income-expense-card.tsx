@@ -1,3 +1,5 @@
+"use client";
+
 import DoubleLineChart from "@/components/charts/double-line-chart";
 import CustomSelect from "@/components/shared/custom-select";
 import { Card, CardContent } from "@/components/ui/card";

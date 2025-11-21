@@ -1,13 +1,10 @@
+"use client";
+
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Input } from "@/components/ui/input";
-import type { Metadata } from "next";
 
-const metadata: Metadata = {
-  title: "Radio Buttons & Selection Controls | WowDash Admin Dashboard",
-  description:
-    "Explore customizable radio buttons and selection controls in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const TypographyPage = () => {
   return (

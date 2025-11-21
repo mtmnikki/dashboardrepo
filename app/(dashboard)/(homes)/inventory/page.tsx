@@ -1,6 +1,5 @@
 import DashboardBreadcrumb from '@/components/layout/dashboard-breadcrumb';
 import LoadingSkeleton from '@/components/loading-skeleton';
-import type { Metadata } from "next";
 import { Suspense } from "react";
 import IncomeExpenseCard from './components/income-expense-card';
 import OverallReportCard from './components/overall-report-card';
@@ -10,12 +9,6 @@ import StateCards from './components/state-cards';
 import TopCustomerCard from './components/top-customer-card';
 import TopSuppliersCard from './components/top-suppliers-card';
 import UsersCard from './components/users-card';
-
-export const metadata: Metadata = {
-    title: "POS & Inventory Management | WowDash Admin Panel",
-    description:
-        "Manage sales, track stock levels, and streamline operations with the POS & Inventory system in WowDash Admin Panel. Simplify transactions and optimize inventory control effortlessly.",
-};
 
 
 const InventorPage = () => {

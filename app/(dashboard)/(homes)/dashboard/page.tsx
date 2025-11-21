@@ -8,14 +8,7 @@ import TotalSubscriberCard from "@/app/(dashboard)/(homes)/dashboard/components/
 import UserOverviewCard from "@/app/(dashboard)/(homes)/dashboard/components/user-overview-card";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
-import type { Metadata } from "next";
 import { Suspense } from "react";
-
-const metadata: Metadata = {
-  title: "AI Dashboard | WowDash Admin Panel",
-  description:
-    "Explore AI analytics, monitor model performance, and track intelligent automation workflows in the AI Dashboard of WowDash Admin Template.",
-};
 
 
 export default async function DashboardPage() {

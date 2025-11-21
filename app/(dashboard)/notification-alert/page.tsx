@@ -1,4 +1,3 @@
-
 "use client";
 
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
@@ -8,6 +7,8 @@ import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import React from "react";
 import { handleNotificationForm } from "./actions";
+
+export const dynamic = 'force-dynamic';
 
 const ViewProfile = () => {
     return (

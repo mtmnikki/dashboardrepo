@@ -1,3 +1,5 @@
+"use client";
+
 import OverallReportChart from "@/components/charts/overall-report-chart";
 import CustomSelect from "@/components/shared/custom-select";
 import { Card, CardContent } from "@/components/ui/card";

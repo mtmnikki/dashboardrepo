@@ -1,8 +1,9 @@
+"use client";
+
 import EmailSidebar from "@/app/(dashboard)/components/email-sidebar";
 import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-overlay";
 import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import LoadingSkeleton from "@/components/loading-skeleton";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,17 +11,11 @@ import { Textarea } from "@/components/ui/textarea";
 import UserList1 from "@/public/assets/images/user-list/user-list1.png";
 import UserList2 from "@/public/assets/images/user-list/user-list2.png";
 import { Images, LinkIcon, MoveLeft, Printer, Send, Star, Trash2 } from "lucide-react";
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
 import { sendMessageAction } from "./actions";
 
-const metadata: Metadata = {
-    title: "Email Details & Message View | WowDash Admin Dashboard",
-    description:
-        "View detailed email content, sender information, and message actions in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const EmailDetailsPage = () => {
     return (
@@ -32,15 +27,11 @@ const EmailDetailsPage = () => {
                 <EmailSidebarOverlay />
 
                 <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <EmailSidebar />
-                    </Suspense>
+                    <EmailSidebar />
                 </div>
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <EmailSidebarToggleButton />
-                    </Suspense>
+                    <EmailSidebarToggleButton />
 
                     <div className="card h-full p-0 email-card overflow-x-auto block border-0 !p-0">
                         <div className="min-w-[450px] flex flex-col justify-between h-full">

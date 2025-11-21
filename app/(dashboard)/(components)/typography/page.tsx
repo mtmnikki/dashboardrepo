@@ -1,12 +1,9 @@
+"use client";
+
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
-import type { Metadata } from "next";
 
-const metadata: Metadata = {
-  title: "Typography & Text Styles | WowDash Admin Dashboard",
-  description:
-    "Explore typography settings, font styles, and text utilities for consistent design in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
+export const dynamic = 'force-dynamic';
 
 const TypographyPage = () => {
   return (

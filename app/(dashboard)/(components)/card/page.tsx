@@ -1,3 +1,5 @@
+"use client";
+
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -11,16 +13,10 @@ import HorizontalCardImg2 from "@/public/assets/images/card-component/horizontal
 import HorizontalCardImg3 from "@/public/assets/images/card-component/horizontal-card-img3.png";
 import HorizontalCardImg4 from "@/public/assets/images/card-component/horizontal-card-img4.png";
 import { BriefcaseBusiness, ChevronRight, Code, Medal, Monitor, UserPlus, X } from "lucide-react";
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-const metadata: Metadata = {
-  title: "Cards & Content Containers | WowDash Admin Dashboard",
-  description:
-    "Showcase versatile card components and content containers for organized layout in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
-
+export const dynamic = 'force-dynamic';
 
 const TypographyPage = () => {
   return (

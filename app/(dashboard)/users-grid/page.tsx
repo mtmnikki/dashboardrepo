@@ -1,5 +1,4 @@
 import React from "react";
-import type { Metadata } from "next";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import SearchBox from "@/components/shared/search-box";
@@ -9,12 +8,6 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Plus } from "lucide-react";
 import UsersGridCard from "@/app/(dashboard)/users-grid/users-grid-card";
-
-const metadata: Metadata = {
-    title: "Users Grid & Profile Overview | WowDash Admin Dashboard",
-    description:
-        "Display and manage user profiles with a dynamic users grid layout in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
-};
 
 const UsersGrid = () => {
     return (

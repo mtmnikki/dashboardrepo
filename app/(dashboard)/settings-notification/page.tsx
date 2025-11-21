@@ -1,12 +1,5 @@
-import type { Metadata } from 'next';
 import DashboardBreadcrumb from '@/components/layout/dashboard-breadcrumb';
 import ClientFirebaseWrapper from './client-wrapper';
-
-export const metadata: Metadata = {
-    title: 'Notification Settings & Preferences | WowDash Admin Dashboard',
-    description:
-        'Configure and customize notification settings and preferences in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.',
-};
 
 export default function NotificationPage() {
     return (

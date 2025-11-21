@@ -9,14 +9,7 @@ import TopSellingProductCard from '@/app/(dashboard)/(homes)/ecommerce/component
 import TransactionsCard from '@/app/(dashboard)/(homes)/ecommerce/component/transactions-card';
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
-import type { Metadata } from "next";
 import { Suspense } from "react";
-
-const metadata: Metadata = {
-  title: "E-commerce Dashboard | WowDash Admin Panel",
-  description:
-    "Manage orders, monitor sales, and track product performance with the E-commerce Dashboard in WowDash Admin Template.",
-};
 
 
 const EcommercePage = () => {
