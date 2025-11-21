@@ -4,7 +4,6 @@ import { NextResponse, type NextRequest } from 'next/server'
 export async function updateSession(request: NextRequest) {
   // Skip middleware for auth pages and public assets
   const isAuthPage = request.nextUrl.pathname.startsWith('/login') ||
-                     request.nextUrl.pathname.startsWith('/signup') ||
                      request.nextUrl.pathname.startsWith('/auth/callback')
 
   const isPublicAsset = request.nextUrl.pathname.startsWith('/_next') ||
