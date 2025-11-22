@@ -1,3 +1,5 @@
+'use client'
+
 import { AppSidebar } from '@/components/app-sidebar'
 import { NavMain } from '@/components/nav-main'
 import { SidebarProvider } from "@/components/ui/sidebar"
