@@ -14,7 +14,7 @@ interface StateCardData {
     title: string;
     value: string;
     icon: React.ReactNode;
-    color: "cyan" | "violet" | "green" | "red"; // restrict to known keys
+    color: "cyan" | "amber" | "green" | "mist"; // restrict to known keys
     change: number;
     trend: "up" | "down";
 }
@@ -24,16 +24,16 @@ const colorClasses: Record<
     { bg: string; gradient: string; border: string; text: string }
 > = {
     cyan: {
-        bg: "bg-cyan-600/25",
-        gradient: "bg-gradient-to-l from-cyan-500/10 to-cyan-500/20",
+        bg: "bg-cyan-800/25",
+        gradient: "bg-gradient-to-l from-cyan-900/10 to-cyan-900/20",
         border: "line-bg-cyan",
-        text: "text-cyan-600 dark:text-cyan-600",
+        text: "text-cyan-700 dark:text-cyan-900",
     },
     violet: {
-        bg: "bg-violet-600/25",
-        gradient: "bg-gradient-to-l from-violet-500/10 to-violet-500/20",
-        border: "line-bg-violet",
-        text: "text-violet-600 dark:text-violet-600",
+        bg: "bg-amber-600/25",
+        gradient: "bg-gradient-to-l from-amber-600/10 to-amber-600/20",
+        border: "line-bg-amber",
+        text: "text-amber-700 dark:text-amber-700",
     },
     green: {
         bg: "bg-green-600/25",
@@ -42,10 +42,10 @@ const colorClasses: Record<
         text: "text-green-600 dark:text-green-600",
     },
     red: {
-        bg: "bg-yellow-500/25",
-        gradient: "bg-gradient-to-l from-yellow-500/10 to-yellow-500/20",
-        border: "line-bg-yellow",
-        text: "text-yellow-500 dark:text-yellow-500",
+        bg: "bg-mist-500/25",
+        gradient: "bg-gradient-to-l from-mist-500/10 to-mist-500/20",
+        border: "line-bg-mist",
+        text: "text-mist-500 dark:text-mist-500",
     },
 };
 
@@ -62,7 +62,7 @@ const stateCardsData: StateCardData[] = [
         title: "Total Purchase",
         value: "$35,000",
         icon: <ShoppingBag />,
-        color: "violet",
+        color: "amber",
         change: 95,
         trend: "up",
     },
@@ -78,7 +78,7 @@ const stateCardsData: StateCardData[] = [
         title: "Total Expense",
         value: "$7,000",
         icon: <ScrollText />,
-        color: "red",
+        color: "mist",
         change: 60,
         trend: "up",
     },
