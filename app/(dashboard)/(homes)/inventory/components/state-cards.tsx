@@ -35,13 +35,13 @@ const colorClasses: Record<
         border: "line-bg-amber",
         text: "text-amber-700 dark:text-amber-700",
     },
-    green: {
+    amber: {
         bg: "bg-green-600/25",
         gradient: "bg-gradient-to-l from-green-500/10 to-green-500/20",
         border: "line-bg-green",
         text: "text-green-600 dark:text-green-600",
     },
-    red: {
+    mist: {
         bg: "bg-mist-500/25",
         gradient: "bg-gradient-to-l from-mist-500/10 to-mist-500/20",
         border: "line-bg-mist",
