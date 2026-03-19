@@ -14,7 +14,7 @@ interface StateCardData {
     title: string;
     value: string;
     icon: React.ReactNode;
-    color: "cyan" | "amber" | "green" | "mist"; // restrict to known keys
+    color: "cyan" | "amber" | "green" | "blue"; // restrict to known keys
     change: number;
     trend: "up" | "down";
 }
@@ -24,10 +24,10 @@ const colorClasses: Record<
     { bg: string; gradient: string; border: string; text: string }
 > = {
     cyan: {
-        bg: "bg-cyan-800/25",
-        gradient: "bg-gradient-to-l from-cyan-900/10 to-cyan-900/20",
+        bg: "bg-cyan-600/25",
+        gradient: "bg-gradient-to-l from-cyan-600/10 to-cyan-600/20",
         border: "line-bg-cyan",
-        text: "text-cyan-700 dark:text-cyan-900",
+        text: "text-cyan-700 dark:text-cyan-600",
     },
     amber: {
         bg: "bg-amber-600/25",
@@ -41,11 +41,11 @@ const colorClasses: Record<
         border: "line-bg-green",
         text: "text-green-600 dark:text-green-600",
     },
-    mist: {
-        bg: "bg-mist-500/25",
-        gradient: "bg-gradient-to-l from-mist-500/10 to-mist-500/20",
-        border: "line-bg-mist",
-        text: "text-mist-500 dark:text-mist-500",
+    blue: {
+        bg: "bg-blue-500/25",
+        gradient: "bg-gradient-to-l from-blue-500/10 to-blue-500/20",
+        border: "line-bg-blue",
+        text: "text-blue-500 dark:text-blue-500",
     },
 };
 
@@ -78,7 +78,7 @@ const stateCardsData: StateCardData[] = [
         title: "Total Expense",
         value: "$7,000",
         icon: <ScrollText />,
-        color: "mist",
+        color: "blue",
         change: 60,
         trend: "up",
     },
