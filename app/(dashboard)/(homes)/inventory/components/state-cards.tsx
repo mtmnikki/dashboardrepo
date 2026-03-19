@@ -29,13 +29,13 @@ const colorClasses: Record<
         border: "line-bg-cyan",
         text: "text-cyan-700 dark:text-cyan-900",
     },
-    violet: {
+    amber: {
         bg: "bg-amber-600/25",
         gradient: "bg-gradient-to-l from-amber-600/10 to-amber-600/20",
         border: "line-bg-amber",
         text: "text-amber-700 dark:text-amber-700",
     },
-    amber: {
+    green: {
         bg: "bg-green-600/25",
         gradient: "bg-gradient-to-l from-green-500/10 to-green-500/20",
         border: "line-bg-green",
